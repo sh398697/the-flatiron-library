@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 
 function BookCard({book, removeBookFromState, currentUser, checkOutBook, isMyBooks, handleReturnBookClick}) {
 
-  const port = process.env.PORT || 6001
   const [detailToggle, setDetailToggle] = useState(false)
 
   function bookDetailToggle(){
@@ -13,7 +12,7 @@ function BookCard({book, removeBookFromState, currentUser, checkOutBook, isMyBoo
   }
 
   function handleDelete(id) {
-    fetch(`https://flatiron-library}.herokuapp.com:${port}/books/${id}`, {
+    fetch(`https://json-server-template-4sub.onrender.com//books/${id}`, {
       method: 'DELETE',
       headers: {'Content-Type': 'application/json'}
     })

@@ -10,7 +10,6 @@ import NewBookForm from "./NewBookForm";
 
 function App() {
   
-  const port = process.env.PORT || 6001
   const [books, setBooks] = useState([])
   const [currentUser, setCurrentUser] = useState('')
 
@@ -30,7 +29,7 @@ function App() {
       }
     });
 
-     fetch(`https://flatiron-library.herokuapp.com:${port}/books/${book.id}`, {
+     fetch(`https://json-server-template-4sub.onrender.com/books/${book.id}`, {
         method: 'PATCH',
         headers: {
           'Content-type': 'application/json',
@@ -57,7 +56,7 @@ function App() {
       }
     });
 
-     fetch(`https://flatiron-library.herokuapp.com:${port}/${book.id}`, {
+     fetch(`https://json-server-template-4sub.onrender.com/${book.id}`, {
         method: 'PATCH',
         headers: {
           'Content-type': 'application/json',

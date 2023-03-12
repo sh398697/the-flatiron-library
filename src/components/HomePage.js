@@ -26,8 +26,7 @@ function HomePage({books, setBooks, currentUser, checkOutBook}) {
   const searchedBooks = books.filter( byKeyword )
 
   useEffect( () => {
-    const port = process.env.PORT || 6001
-    fetch( `https://flatiron-library.herokuapp.com:${port}/books/` )
+    fetch( `https://json-server-template-4sub.onrender.com//books/` )
       .then( r => r.json() )
       .then( setBooks )
   }, [] )

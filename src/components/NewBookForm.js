@@ -3,8 +3,6 @@ import { useState } from "react";
 
 function NewBookForm({ addBookToState}) {
   
-  const port = process.env.PORT || 6001
-
   const [ newTitle, setTitle ] = useState( '' )
   const [ newAuthor, setAuthor ] = useState( '' )
   const [ newGenre, setGenre ] = useState( '' )
@@ -32,7 +30,7 @@ function NewBookForm({ addBookToState}) {
       owner: ""
     }
 
-    fetch( `https://flatiron-library.herokuapp.com:${port}/books`, {
+    fetch( `https://json-server-template-4sub.onrender.com/books`, {
       method: 'POST', 
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify( newBook )
