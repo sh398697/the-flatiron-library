@@ -12,7 +12,7 @@ function BookCard({book, removeBookFromState, currentUser, checkOutBook, isMyBoo
   }
 
   function handleDelete(id) {
-    fetch(`https://flatiron-library.herokuapp.com/books/${id}`, {
+    fetch(`https://flatiron-library.herokuapp.com:6001/books/${id}`, {
       method: 'DELETE',
       headers: {'Content-Type': 'application/json'}
     })

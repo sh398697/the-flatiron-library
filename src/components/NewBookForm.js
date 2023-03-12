@@ -30,7 +30,7 @@ function NewBookForm({currentUser, addBookToState}) {
       owner: ""
     }
 
-    fetch( 'https://flatiron-library.herokuapp.com/books', {
+    fetch( 'https://flatiron-library.herokuapp.com:6001/books', {
       method: 'POST', 
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify( newBook )
