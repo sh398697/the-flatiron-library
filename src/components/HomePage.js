@@ -5,8 +5,6 @@ import BookList from "./BookList";
 
 function HomePage({books, setBooks, currentUser, checkOutBook}) {
 
-  const port = process.env.PORT || 6001
-
   function removeBookFromState(bookID) {
     
     const filteredArray = books.filter(book => {
@@ -28,6 +26,7 @@ function HomePage({books, setBooks, currentUser, checkOutBook}) {
   const searchedBooks = books.filter( byKeyword )
 
   useEffect( () => {
+    const port = process.env.PORT || 6001
     fetch( `https://flatiron-library.herokuapp.com:${port}/books/` )
       .then( r => r.json() )
       .then( setBooks )
