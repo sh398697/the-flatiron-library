@@ -28,7 +28,7 @@ function HomePage({books, setBooks, currentUser, checkOutBook}) {
   const searchedBooks = books.filter( byKeyword )
 
   useEffect( () => {
-    fetch( `https://flatiron-library}.herokuapp.com:${port}/books/` )
+    fetch( `https://flatiron-library.herokuapp.com:${port}/books/` )
       .then( r => r.json() )
       .then( setBooks )
   }, [] )
