@@ -12,7 +12,7 @@ function BookCard({book, removeBookFromState, currentUser, checkOutBook, isMyBoo
   }
 
   function handleDelete(id) {
-    fetch(`https://json-server-template-4sub.onrender.com//books/${id}`, {
+    fetch(`https://json-server-template-4sub.onrender.com/books/${id}`, {
       method: 'DELETE',
       headers: {'Content-Type': 'application/json'}
     })
