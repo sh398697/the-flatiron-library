@@ -10,6 +10,7 @@ import NewBookForm from "./NewBookForm";
 
 function App() {
   
+  const port = process.env.PORT || 6001
   const [books, setBooks] = useState([])
   const [currentUser, setCurrentUser] = useState('')
 
@@ -29,7 +30,7 @@ function App() {
       }
     });
 
-     fetch(`https://flatiron-library.herokuapp.com:6001/books/${book.id}`, {
+     fetch(`https://flatiron-library}.herokuapp.com:${port}/books/${book.id}`, {
         method: 'PATCH',
         headers: {
           'Content-type': 'application/json',
@@ -80,7 +81,7 @@ function App() {
         <MyBooks books={books} setBooks={setBooks} currentUser={currentUser} returnBook={returnBook}/>
         </Route>
         <Route exact path="/newbook">
-          <NewBookForm currentUser={currentUser} addBookToState={addBookToState}/>
+          <NewBookForm addBookToState={addBookToState}/>
         </Route>
         <Route exact path="/about">
           <About />
