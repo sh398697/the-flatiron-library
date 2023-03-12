@@ -57,7 +57,7 @@ function App() {
       }
     });
 
-     fetch(`https://flatiron-library.herokuapp.com:6001/${book.id}`, {
+     fetch(`https://flatiron-library.herokuapp.com:${port}/${book.id}`, {
         method: 'PATCH',
         headers: {
           'Content-type': 'application/json',
