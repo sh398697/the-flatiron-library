@@ -29,7 +29,7 @@ function App() {
       }
     });
 
-     fetch(`https://json-server-template-4sub.onrender.com/books/${book.id}`, {
+     fetch(`/${book.id}`, {
         method: 'PATCH',
         headers: {
           'Content-type': 'application/json',
@@ -56,7 +56,7 @@ function App() {
       }
     });
 
-     fetch(`https://json-server-template-4sub.onrender.com/books/${book.id}`, {
+     fetch(`https://flatiron-library.herokuapp.com/${book.id}`, {
         method: 'PATCH',
         headers: {
           'Content-type': 'application/json',
