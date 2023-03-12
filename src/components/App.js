@@ -29,7 +29,7 @@ function App() {
       }
     });
 
-     fetch(`/${book.id}`, {
+     fetch(`https://flatiron-library.herokuapp.com:6001/books/${book.id}`, {
         method: 'PATCH',
         headers: {
           'Content-type': 'application/json',
