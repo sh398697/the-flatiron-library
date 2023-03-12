@@ -20,6 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
+    "server": "json-server --watch ./db.json -p 6001",
     "all": "npm-run-all --parallel server start"
   },
   "eslintConfig": {
