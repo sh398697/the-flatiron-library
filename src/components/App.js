@@ -29,7 +29,7 @@ function App() {
       }
     });
 
-     fetch(`https://json-server-template-4sub.onrender.com/books/${book.id}`, {
+     fetch(`${process.env.REACT_APP_API_URL}/${book.id}`, {
         method: 'PATCH',
         headers: {
           'Content-type': 'application/json',
@@ -56,7 +56,7 @@ function App() {
       }
     });
 
-     fetch(`https://json-server-template-4sub.onrender.com/${book.id}`, {
+     fetch(`${process.env.REACT_APP_API_URL}/${book.id}`, {
         method: 'PATCH',
         headers: {
           'Content-type': 'application/json',

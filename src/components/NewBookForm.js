@@ -30,7 +30,7 @@ function NewBookForm({ addBookToState}) {
       owner: ""
     }
 
-    fetch( `https://json-server-template-4sub.onrender.com/books`, {
+    fetch( `${process.env.REACT_APP_API_URL}/books`, {
       method: 'POST', 
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify( newBook )
