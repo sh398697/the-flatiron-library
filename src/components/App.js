@@ -29,7 +29,7 @@ function App() {
       }
     });
 
-     fetch(`${process.env.REACT_APP_API_URL}/${book.id}`, {
+     fetch(`${process.env.REACT_APP_API_URL}/books/${book.id}`, {
         method: 'PATCH',
         headers: {
           'Content-type': 'application/json',
@@ -56,7 +56,7 @@ function App() {
       }
     });
 
-     fetch(`${process.env.REACT_APP_API_URL}/${book.id}`, {
+     fetch(`${process.env.REACT_APP_API_URL}/books/${book.id}`, {
         method: 'PATCH',
         headers: {
           'Content-type': 'application/json',
